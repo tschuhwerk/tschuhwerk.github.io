@@ -2,11 +2,14 @@
 :root{
   --bg: #0c0f14;
   --panel: #131723;
-  --text: #e8eaf0;
-  --muted: #a6abbb;
+  --text:  #eef1f7;     /* slightly brighter */
+  --muted: #c2c8d6;     /* ensure 4.5:1 against panel/bg */
   --border: #242a38;
-  --link: #7ad9ff;
+  --link:  #a7e2ff;     /* brighter link for 4.5:1 vs panel */
   --brand: #8bd0ff;
+   
+  
+  
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
