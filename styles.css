@@ -41,9 +41,19 @@ body{
 @media(min-width:820px){.grid{grid-template-columns:repeat(3,1fr)}}
 .role h3{margin:.25rem 0}
 .meta{color:var(--muted);margin:.25rem 0 .5rem}
+.name-link {
+  color: inherit;          /* Use the same text color as the heading */
+  text-decoration: none;   /* Remove underline */
+  cursor: pointer;         /* Show pointer cursor on hover */
+}
+.name-link: hover,
+.name-link:focus {
+  text-decoration: none;   /* Keep it clean even on hover/focus */
+  color: inherit;          /* Prevent color change */
+}
 ul{padding-left:1.1rem;margin:.25rem 0 0}
 a{color:var(--link)}
-a:hover{opacity:.9}
+a: hover{opacity:.9}
 .site-footer{border-top:1px solid var(--border);padding:1.25rem 0;color:var(--muted);margin-top:2rem}
 html {
   scroll-behavior: smooth;
