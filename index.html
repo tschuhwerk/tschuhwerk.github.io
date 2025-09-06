@@ -40,11 +40,19 @@
         <h1 class="site-title"><a href="#top" class="name-link">Tracy Schuhwerk</a></h1>
         <p class="tagline">Senior Software Engineer · Java · Spring Boot · Microservices</p>
       </div>
-      <nav class="site-nav" aria-label="Primary">
+      \1
+      <button class="theme-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z" fill="currentColor"/>
+        </svg>
+        <span class="sr-only">Toggle theme</span>
+      </button>
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
         <a href="#highlights">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
+        <a href="resume.html">Resume (Print)</a>
       </nav>
     </div>
   </header>
@@ -173,5 +181,7 @@
   </footer>
 
   <script src="script.js" defer></script>
+
+  <button class="to-top" aria-label="Scroll to top" hidden>↑</button>
 </body>
 </html>
