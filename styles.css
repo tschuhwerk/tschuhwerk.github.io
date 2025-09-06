@@ -49,7 +49,7 @@ body{
   text-decoration: none;   /* Remove underline */
   cursor: pointer;         /* Show pointer cursor on hover */
 }
-.name-link: hover,
+.name-link:hover { text-decoration: underline; } /* optional: subtle affordance */
 .name-link:focus {
   text-decoration: none;   /* Keep it clean even on hover/focus */
   color: inherit;          /* Prevent color change */
@@ -60,4 +60,7 @@ a: hover{opacity:.9}
 .site-footer{border-top:1px solid var(--border);padding:1.25rem 0;color:var(--muted);margin-top:2rem}
 html {
   scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
