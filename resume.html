@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume — Tracy Schuhwerk</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Print-friendly overrides */
+    body{ background:#fff; color:#000; }
+    .site-header, .site-footer, .print-hide{ display:none !important; }
+    main.container{ max-width: 900px; }
+    .resume h1{ font-size: 2rem; margin: 0 0 .25rem; }
+    .resume .meta{ color:#333; }
+    .resume section{ margin: 1rem 0; }
+    .resume ul{ margin:.25rem 0 0; }
+    @media print{
+      @page{ size: Letter; margin: 0.5in; }
+      a{ color:#000; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-hide" style="padding: .75rem 1rem; background: rgba(17,24,38,.15); border-bottom: 1px solid #2a3246;">
+    <a href="index.html">&larr; Back to site</a>
+    <a class="print-btn" style="margin-left:.75rem" href="#" onclick="window.print()">Print / Save as PDF</a>
+    <a class="print-btn" style="margin-left:.5rem" href="assets/Tracy-Schuhwerk-Resume-2025.docx">Download DOCX</a>
+  </div>
+
+  <main class="container resume">
+    <h1>Tracy Schuhwerk</h1>
+    <div class="meta">Senior Software Engineer · Java · Spring Boot · Microservices</div>
+
+    <section>
+      <h2>Summary</h2>
+      <p>Senior Software Engineer with extensive expertise in Java development, Spring Boot, and microservices.
+      Skilled in building scalable enterprise applications across insurance, logistics, and e-commerce industries.
+      Proven track record of leading teams, mentoring developers, and leveraging AI-driven tools to enhance efficiency
+      and streamline workflows. Passionate about delivering innovative solutions that create long-term value.</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>Java (17/21), Spring Boot, Microservices</li>
+        <li>Go, Groovy, JavaScript, C/C++, C#</li>
+        <li>SQL (Oracle/DB2/SQL Server/MySQL), Hibernate</li>
+        <li>Azure DevOps, AWS, Kubernetes</li>
+        <li>JUnit/Mockito, IntelliJ/Eclipse</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <h3>Application Developer IV — Cincinnati Bell Technology Services / Great American Insurance Group</h3>
+      <div class="meta">Cincinnati, OH · Feb 2024 — Mar 2025</div>
+      <ul>
+        <li>Built document extraction/processing services with Java 17/21, Groovy, Spring Boot.</li>
+        <li>Integrated Microsoft Copilot to lift processing accuracy by ~70%.</li>
+        <li>Increased straight-through processing and reduced manual intervention.</li>
+      </ul>
+
+      <h3>Java Project Technical Lead — American Modern Insurance Group</h3>
+      <div class="meta">Amelia, OH · Aug 2022 — Jun 2023</div>
+      <ul>
+        <li>Led offshore team on Azure-based data ingestion.</li>
+        <li>Built Spring Boot services for client data processing.</li>
+      </ul>
+
+      <h3>Senior Software Engineer III — Vaco Consultant (Kroger)</h3>
+      <div class="meta">Cincinnati, OH · Nov 2021 — Jul 2022</div>
+      <ul>
+        <li>Developed Go/Java services and improved Kubernetes load balancing.</li>
+      </ul>
+
+      <h3>Senior Application Architect — Verst Logistics</h3>
+      <div class="meta">Walton, KY · Jan 2021 — Oct 2021</div>
+      <ul>
+        <li>Migrated 100+ reports to SSRS; created Go automation tools.</li>
+      </ul>
+
+      <h3>Lead eCommerce Developer — Cornerstone Brands</h3>
+      <div class="meta">West Chester, OH · Mar 2011 — Aug 2022</div>
+      <ul>
+        <li>Migrated from GWT to PWA; implemented ADA accessibility.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p><strong>BS, Computer Science</strong> — Northern Kentucky University, Highland Heights, KY</p>
+    </section>
+  </main>
+
+  <button class="to-top" aria-label="Scroll to top" hidden>↑</button>
+</body>
+</html>
