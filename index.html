@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracy Schuhwerk - Senior Software Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header .title {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: #667eea;
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .summary p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .skill-category h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-3px);
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            margin-bottom: 15px;
+        }
+
+        .job-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .date-location {
+            color: #888;
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+        .job-description ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .job-description li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .education-item {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .degree {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .university {
+            font-size: 1.1rem;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .education-date {
+            color: #888;
+            font-size: 0.95rem;
+        }
+
+        .professional-dev {
+            margin-top: 20px;
+        }
+
+        .professional-dev h4 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .professional-dev ul {
+            margin-left: 20px;
+        }
+
+        .professional-dev li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-element {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .floating-element:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+        .floating-element:nth-child(2) { top: 60%; left: 80%; animation-delay: 2s; }
+        .floating-element:nth-child(3) { top: 80%; left: 20%; animation-delay: 4s; }
+        .floating-element:nth-child(4) { top: 40%; left: 90%; animation-delay: 1s; }
+        .floating-element:nth-child(5) { top: 10%; left: 70%; animation-delay: 3s; }
+    </style>
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <h1>Tracy Schuhwerk</h1>
+            <p class="title">Senior Software Engineer</p>
+            <div class="contact-info">
+                <a href="mailto:tracy.schuhwerk@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    tracy.schuhwerk@gmail.com
+                </a>
+                <a href="tel:859-391-5252" class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    859-391-5252
+                </a>
+                <span class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Walton, KY
+                </span>
+                <a href="https://linkedin.com/in/tracy-schuhwerk/" target="_blank" class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn Profile
+                </a>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <section class="section full-width summary">
+                <h2><i class="fas fa-user"></i> Professional Summary</h2>
+                <p>Senior Software Engineer with extensive expertise in Java development, Spring Boot, and microservices. Skilled in building scalable enterprise applications across insurance, logistics, and e-commerce industries. Proven track record of leading teams, mentoring developers, and leveraging AI-driven tools to enhance efficiency and streamline workflows. Passionate about delivering innovative solutions that solve real business problems and create long-term value. Experienced in collaborating with cross-functional teams, driving Agile best practices, and guiding projects from design through deployment. Adept at balancing hands-on coding with architectural vision, ensuring systems are reliable, secure, and optimized for performance.</p>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-code"></i> Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Technical Skills</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Java (17/21)</span>
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">Go</span>
+                            <span class="skill-tag">Groovy</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">C/C++</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Hibernate</span>
+                            <span class="skill-tag">Azure DevOps</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">JUnit/Mockito</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Soft Skills</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Leadership</span>
+                            <span class="skill-tag">Team Mentoring</span>
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Collaboration</span>
+                            <span class="skill-tag">Adaptability</span>
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Project Management</span>
+                            <span class="skill-tag">Innovation</span>
+                            <span class="skill-tag">Agile Practices</span>
+                            <span class="skill-tag">Critical Thinking</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section full-width">
+                <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Application Developer IV</div>
+                        <div class="company">Cincinnati Bell Technology Services - Great American Insurance Group</div>
+                        <div class="date-location">February 2024 - March 2025 | Cincinnati, Ohio</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Built document extraction/processing services in Java 17/21, Groovy, Spring Boot</li>
+                            <li>Integrated Microsoft Copilot to lift processing accuracy by ~70%</li>
+                            <li>Increased straight-through processing and reduced manual intervention</li>
+                            <li>Applied Agile (Scrum/Kanban, TDD/CI/CD) to shorten delivery cycles</li>
+                            <li>Partnered with cross-functional teams to raise system reliability and throughput</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Java Project Technical Lead</div>
+                        <div class="company">American Modern Insurance Group</div>
+                        <div class="date-location">August 2020 - June 2023 | Amelia, Ohio</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Led 5 offshore developers and 3 QA engineers on Azure-based data ingestion</li>
+                            <li>Built Spring Boot services for client data loading/processing</li>
+                            <li>Improved XML feed quality by ~30% via validation tooling</li>
+                            <li>Streamlined onboarding/docs; cut training time by ~20%</li>
+                            <li>Drove delivery using Azure DevOps with continuous integration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Lead eCommerce Developer</div>
+                        <div class="company">Cornerstone Brands</div>
+                        <div class="date-location">March 2011 - August 2020 | West Chester, Ohio</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Managed offshore teams for multi-brand e-commerce sites</li>
+                            <li>Moved from GWT to PWA; page load times improved ~40%</li>
+                            <li>Implemented ADA accessibility across brands to boost usability</li>
+                            <li>Introduced API-driven patterns to support headless commerce</li>
+                            <li>Established Kanban/Jira workflows to raise team productivity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Senior Software Engineer III</div>
+                        <div class="company">Vaco Consultant (Kroger)</div>
+                        <div class="date-location">November 2021 - July 2022 | Cincinnati, Ohio</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Developed Go/Java services for location validation & delivery management</li>
+                            <li>Tuned service configs to improve Kubernetes load balancing</li>
+                            <li>Provided 24/7 production support on a rotating schedule</li>
+                            <li>Documented processes in Confluence; enabled faster onboarding</li>
+                            <li>Coordinated with logistics/inventory teams for resilient integrations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Senior Application Architect</div>
+                        <div class="company">Verst Logistics</div>
+                        <div class="date-location">January 2021 - October 2021 | Walton, Kentucky</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Designed and implemented complex distributed software solutions using Java</li>
+                            <li>Migrated 100+ reports from Crystal Reports/BO to SSRS</li>
+                            <li>Created Go automation tools; reduced manual workload ~35%</li>
+                            <li>Optimized Oracle/SQL Server queries to improve reporting accuracy</li>
+                            <li>Led modernization discussions to improve scalability and stability</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section full-width">
+                <h2><i class="fas fa-graduation-cap"></i> Education & Training</h2>
+                
+                <div class="education-item">
+                    <div class="degree">Bachelor of Science - Computer Science</div>
+                    <div class="university">Northern Kentucky University</div>
+                    <div class="education-date">1985 - 1989 | Highland Heights, Kentucky</div>
+                </div>
+
+                <div class="professional-dev">
+                    <h4>Professional Development</h4>
+                    <ul>
+                        <li>Continuous upskilling in AI-driven development (Microsoft Copilot, ChatGPT)</li>
+                        <li>Ongoing training in Cloud & Containerized Systems (AWS, Azure, Kubernetes)</li>
+                        <li>Advanced practices in Agile leadership, team mentoring, and project delivery</li>
+                        <li>Regular self-study and adaptation to emerging technologies and frameworks</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
